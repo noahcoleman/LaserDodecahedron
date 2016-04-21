@@ -1,10 +1,6 @@
 #!/usr/bin/python
 
 # import sys
-# import glob
-# import random
-# from decimal import Decimal
-# TWOPLACES = Decimal(10) ** -2
 import serial
 import os
 import glob
