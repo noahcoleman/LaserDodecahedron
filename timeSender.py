@@ -69,7 +69,7 @@ def shouldBeOn():
     if 1 < weekday < 5:
         print "Gallery is open today",
         openTime = time(11, 00) # gallery opens at 11:00
-        closeTime = time(18, 00) # gallery closes at 6:00
+        closeTime = time(16, 07) # gallery closes at 6:00
         # testTime = time(18, 30) # dummy value for testing
         t = datetime.time(today)
         if closeTime > t > openTime:
@@ -120,9 +120,9 @@ def main():
         else:
             if wasOn:
                 i = 0
-                while i < 10:
+                while i < 50:
                     endDraw(s)
-                    clock.sleep(1)
+                    clock.sleep(0.5)
                     i = 1 + i
                 wasOn = False
 
