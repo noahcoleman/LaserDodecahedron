@@ -12,7 +12,7 @@ from datetime import time
 # total travel on y = 400
 
 # GET FILES FROM CORRECT DIRECTORY
-os.chdir('/Users/Noah/Documents/Python/LaserDodecahedron/ncFiles') # change present working directory to one with all the files
+os.chdir('/FinalLaserWriter/ncFiles') # change present working directory to one with all the files
 allFiles = glob.glob('*.nc')
 # print allFiles
 
@@ -62,6 +62,7 @@ def printAndWait(s, message): # send a line to serial and wait for "ok" message 
         # print code #print to console for debugging
 
 def shouldBeOn():
+    # return True
     # compare times/ time comparisons compare time to range
     today = datetime.now()
     # testDay = 3 # dummy value for testing
@@ -85,7 +86,7 @@ def shouldBeOn():
 def main():
     print("Let's get this laser party started!")
     
-    glowWriter =  "/dev/tty.usbmodem1421" # "/dev/ttyACM0" is the default on the RPi "/dev/tty.usbmodem1411" or "/dev/tty.usbmodem1421" on Mac
+    glowWriter =  "/dev/ttyACM0" # "/dev/ttyACM0" is the default on the RPi "/dev/tty.usbmodem1411" or "/dev/tty.usbmodem1421" on Mac
 
     s = serial.Serial()
     # These are exceptions to keep the program running even if we don't connect to serial.
